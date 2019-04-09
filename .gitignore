@@ -3,4 +3,5 @@ logs
 *.log
 
 # Dependency directory
-node_modules
+# these files are now needed as the downloaded node_modules produce a problem with dashboard
+# node_modules
