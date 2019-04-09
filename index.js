@@ -11,10 +11,10 @@ var app_name = "Parse-Dashboard"
 var app_id = "myAppId";
 var master_key = "myMasterKey";
 var server_url = "http://localhost:"+port+"/parse";
-var database_uri = process.env.DATABASE_URI || process.env.MONGODB_URI || "mongodb://localhost:27017/dev";
+var database_uri = "mongodb://localhost:27017/"+app_name || "mongodb://localhost:27017/dev";
 
 var api = new ParseServer({
-  databaseURI: database_uri,
+  databaseURI: process.env.DATABASE_URI || process.env.MONGODB_URI || database_uri,
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: process.env.APP_ID || app_id,
   masterKey: process.env.MASTER_KEY || master_key, //Add your master key here. Keep it secret!
@@ -35,7 +35,7 @@ var dashboard = new ParseDashboard({
       "serverURL": server_url,
       "appId": app_id,
       "masterKey": master_key,
-      "appName" app_name
+      "appName": app_name
     },
     {
       "serverURL": server_url,
