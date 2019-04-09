@@ -1,19 +1,19 @@
 {
-  "name": "parse-server-example",
-  "version": "1.4.0",
-  "description": "An example Parse API server using the parse-server module",
+  "name": "parse-server-with-dashboard",
+  "version": "1.3.0",
+  "description": "An example Parse API server using parse-server-example and parse-dashboard module",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ParsePlatform/parse-server-example"
+    "url": "https://github.com/Anik7303/parse-server-with-dashboard"
   },
-  "license": "MIT",
+  "license": "OpenSource",
   "dependencies": {
     "express": "~4.14.1",
     "kerberos": "~0.0.x",
     "parse": "~1.8.0",
     "parse-server": "*",
-    "parse-dashboard": "^1.0.24"
+    "parse-dashboard": "*"
   },
   "scripts": {
     "start": "node index.js"
