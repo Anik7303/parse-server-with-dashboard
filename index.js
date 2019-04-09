@@ -11,7 +11,7 @@ var app_name = "Parse-Dashboard"
 var app_id = "myAppId";
 var master_key = "myMasterKey";
 var server_url = "http://localhost:"+port+"/parse";
-var database_uri = "mongodb://localhost:27017/"+app_name || "mongodb://localhost:27017/dev";
+var database_uri = "mongodb://localhost:27017/"+app_name;
 
 var api = new ParseServer({
   databaseURI: process.env.DATABASE_URI || process.env.MONGODB_URI || database_uri,
@@ -39,15 +39,9 @@ var dashboard = new ParseDashboard({
     },
     {
       "serverURL": server_url,
-      "appId": "dkMnPHZlsj2E8w8fm6vTa4rWWhYBCljHoJL8lUMR",
-      "masterKey": "3pkvzP4mRFuW650XauJobuJ45N0UVcpg0ETB5jLI",
-      "appName": "instagram-clone"
-    },
-    {
-      "serverURL": server_url,
-      "appId": "sMCqrsyO4j9mRY3EpS5GCvpgjOquXaL7BVPfSisH",
-      "masterKey": "jUlBX8nnDLLWrQ3hUQyXZC1qTtMENEQ0pnh2BDUw",
-      "appName": "twitter-clone"
+      "appId": "newAppId",
+      "masterKey": "newMasterKey",
+      "appName": "newApp"
     }
   ]
 }, options);
